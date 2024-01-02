@@ -1,19 +1,24 @@
-import React, {Suspense, useContext, useState} from 'react';
-import './styles/index.scss';
-import {Link} from "react-router-dom";
-import {useTheme} from "./providers/ThemeProviders/lib/useTheme";
-import {classNames} from "shared/lib/classnames/classnames";
-import {AppRouter} from "app/providers/router";
+import React, { Suspense } from 'react'
+import './styles/index.scss'
+import { useTheme } from './providers/ThemeProviders/lib/useTheme'
+import { classNames } from 'shared/lib/classnames/classnames'
+import { AppRouter } from 'app/providers/router'
+import { Navbar } from 'widgets/Navbar'
+import { Sidebar } from 'widgets/Sidebar'
+
 const App = () => {
-    const { theme, toggleTheme } = useTheme();
-    return (
-        <div className={classNames('app', {}, [theme])}>
-            <button onClick={toggleTheme}>TOGGLE</button>
-            <Link to={'/'}>Главная</Link>
-            <Link to={'/about'}>О сайте</Link>
-            <AppRouter />
-        </div>
-    )
+  const { theme } = useTheme()
+  return (
+		<div className={classNames('app', {}, [theme])}>
+			<Suspense fallback=''>
+				<Navbar />
+				<div className='content-page'>
+					<Sidebar />
+					<AppRouter />
+				</div>
+			</Suspense>
+		</div>
+  )
 }
 
-export default App;
+export default App
