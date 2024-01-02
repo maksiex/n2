@@ -5,7 +5,8 @@ module.exports = {
     },
     "extends": [
         "standard-with-typescript",
-        "plugin:react/recommended"
+        "plugin:react/recommended",
+        'plugin:i18next/recommended',
     ],
     "overrides": [
         {
@@ -25,7 +26,9 @@ module.exports = {
         "sourceType": "module"
     },
     "plugins": [
-        "react"
+        "react",
+        "@typescript-eslint",
+        'i18next',
     ],
     "rules": {
         "@typescript-eslint/explicit-function-return-type": "off",
@@ -45,7 +48,8 @@ module.exports = {
         "@typescript-eslint/prefer-nullish-coalescing": 'off',
         "no-mixed-spaces-and-tabs": 'off',
         "react/no-deprecated": 'off',
-        "@typescript-eslint/naming-convention": 'off'
+        "@typescript-eslint/naming-convention": 'off',
+        "i18next/no-literal-string": ['error', {markupOnly: true}]
 
     },
     globals: {

@@ -7,7 +7,8 @@
     "start": "webpack serve --env port=1239",
     "build:dev": "webpack --env mode=development",
     "build:prod": "webpack --env mode=production",
-    "lint": "eslint --fix --ext .ts,.tsx ."
+    "eslint": "eslint --fix --ext .ts,.tsx .",
+    "stylelint": "npx stylelint \"**/*.scss\" --fix"
   },
   "keywords": [],
   "author": "",
@@ -27,6 +28,7 @@
     "eslint-config-standard-with-typescript": "^43.0.0",
     "eslint-config-xo": "^0.43.1",
     "eslint-config-xo-typescript": "^1.0.1",
+    "eslint-plugin-i18next": "^6.0.3",
     "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-n": "^16.6.0",
     "eslint-plugin-promise": "^6.1.1",
@@ -41,6 +43,8 @@
     "sass": "^1.49.9",
     "sass-loader": "^12.6.0",
     "style-loader": "^3.3.1",
+    "stylelint": "^16.1.0",
+    "stylelint-config-standard-scss": "^12.0.0",
     "ts-loader": "^9.2.6",
     "ts-node": "^10.5.0",
     "typescript": "^5.3.3",
