@@ -1,7 +1,8 @@
 module.exports = {
     "env": {
         "browser": true,
-        "es2021": true
+        "es2021": true,
+        "jest": true,
     },
     "extends": [
         "standard-with-typescript",
@@ -49,7 +50,8 @@ module.exports = {
         "no-mixed-spaces-and-tabs": 'off',
         "react/no-deprecated": 'off',
         "@typescript-eslint/naming-convention": 'off',
-        "i18next/no-literal-string": ['error', {markupOnly: true}]
+        "i18next/no-literal-string": ['error', {markupOnly: true}],
+        "@typescript-eslint/strict-boolean-expressions": "off"
 
     },
     globals: {
